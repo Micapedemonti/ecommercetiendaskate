@@ -1,4 +1,5 @@
 import './NavBar.css'
+import CartWidget from '../../CartWidget/CartWidget'
 
 const NavBar =() =>{
     return (
@@ -31,9 +32,13 @@ const NavBar =() =>{
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="#">CONTACTO</a>
               </li>
+              <div>
+          <CartWidget/>
+        </div>
             </ul>
           </div>
         </div>
+      
       </nav>
       
     )

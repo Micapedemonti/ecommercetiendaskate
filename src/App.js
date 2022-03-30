@@ -1,6 +1,6 @@
-
 import './App.css';
 import NavBar from './components/components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemsListContainer';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         </div>
     <NavBar/>
      <h1> UFO SKATESHOP</h1>
+     <ItemListContainer greeting='Productos'/>
       </header>
     </div>
   );
