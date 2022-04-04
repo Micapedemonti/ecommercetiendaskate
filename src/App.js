@@ -1,8 +1,15 @@
 import './App.css';
+import Counter from './components/components/ItemCount/ItemCount';
 import NavBar from './components/components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemsListContainer';
+import ItemCount from './components/components/ItemCount/ItemCount';
 
-function App() {
+
+const App =()=> {
+
+  const handleOnAdd =(quantity)=> {
+    console.log ('se agregaron ${quantity} productos')
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -12,6 +19,7 @@ function App() {
     <NavBar/>
      <h1> UFO SKATESHOP</h1>
      <ItemListContainer greeting='Productos'/>
+     <Counter initial= {0} stock ={10} onAdd={handleOnAdd}/>
       </header>
     </div>
   );
