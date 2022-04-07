@@ -17,7 +17,6 @@ const App =()=> {
         <img src={'./images/logo.png'} className="App-logo" alt="logo" />
         </div>
     <NavBar/>
-     <h1> UFO SKATESHOP</h1>
      <ItemListContainer greeting='Productos'/>
      <Counter initial= {0} stock ={10} onAdd={handleOnAdd}/>
       </header>
