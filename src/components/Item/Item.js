@@ -1,7 +1,10 @@
+import './Item.css';
+
+
 const Item =({name, img, Price}) => {
 
     return(
-        <section>
+        <section className='seccionProducts'>
 
          <picture>
              <img src ={img} alt ={name}/>
