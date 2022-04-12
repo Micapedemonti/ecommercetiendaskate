@@ -15,4 +15,5 @@ const Item =({name, img, Price}) => {
         </section>
     )
 }
+
 export default Item

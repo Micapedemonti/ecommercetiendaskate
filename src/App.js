@@ -3,6 +3,7 @@ import Counter from './components/components/ItemCount/ItemCount';
 import NavBar from './components/components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemsListContainer';
 import ItemCount from './components/components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 const App =()=> {
 
@@ -20,6 +21,7 @@ const App =()=> {
         </div>
      <ItemListContainer greeting='Ofertas'/>
      <Counter initial= {0} stock ={10} onAdd={handleOnAdd}/>
+     <ItemDetailContainer/>
       </header>
     </div>
   );
