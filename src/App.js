@@ -1,10 +1,10 @@
 import './App.css';
-import Counter from './components/components/ItemCount/ItemCount';
-import NavBar from './components/components/NavBar/NavBar';
+import Counter from './components/ItemCount/ItemCount';
+import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemsListContainer';
-import ItemCount from './components/components/ItemCount/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
+import ItemCount from './components/ItemCount/ItemCount';
+import { BrowserRouter, Router, Switch,Route } from 'react-router-dom';
 const App =()=> {
 
   const handleOnAdd =(quantity)=> {
