@@ -1,10 +1,10 @@
-import Item from '../Item/Item'
+import Item from '../Productos/Item'
+import ItemCount from "../ItemCount/ItemCount"
 
 const ItemList =({products})=>{
     return (
         <ul>
             {products.map(prod => <Item key= {prod.id}{...prod}/>)}
-    
         </ul>
     )
 }

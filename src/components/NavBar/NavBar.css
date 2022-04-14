@@ -1,3 +1,11 @@
 .menuNav{
-    background-color: white;
+    background-color: white;        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        flex-direction: column;
+       display: flex;
 }
+.menuNav ul li{
+    font-size: 1.5rem;
+}
+

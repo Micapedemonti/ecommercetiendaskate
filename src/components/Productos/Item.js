@@ -16,12 +16,12 @@ const Item =({id, name, img, Price}) => {
          <p>{Price} </p>
          </section>
     <footer>
-        {/* <Link to={`productos/:${id}`}>Ver detalle</Link> */}
-         <button>Ver detalle</button>
+        <Link to={`detail/${id}`}>Ver detalle</Link> 
+        {/* <Counter initial= {0} stock ={10} onAdd={handleOnAdd}/> */}
          </footer>
         </article>
     )
-}
+    }
 
 export default Item
          

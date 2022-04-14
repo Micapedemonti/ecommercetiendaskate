@@ -7,13 +7,14 @@ body{
   text-align: center;
 }
 
+
 .App-logo {
   pointer-events: none;
 }
 .titulo{
   color:white
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (min-width:992px) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
     width: 150px;
@@ -24,19 +25,18 @@ body{
   }
 }
 
-.App-header {
-  background-color:white;
-  min-height: 100vh;
-} 
-.menu{
-  display: flex;
-}
 .Caja-logo{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
+ .App-header {
+  background-color:white;
+  min-height: 100vh;
+} 
+
 .App-link {
   color: #61dafb;
-}
+} 
 
