@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import ItemDetail from "../Detalles/ItemDetail"
 import { getProductsById } from "../../asyncmock"
 import {useParams} from 'react-router-dom'
+import ItemCount from "../ItemCount/ItemCount"
 
 
 const ItemDetailContainer =(props)=>{ 
@@ -22,7 +23,9 @@ const ItemDetailContainer =(props)=>{
             setProduct()
         })
     },[])    
-
+    const handleOnAdd =(quantity)=> {
+        console.log ('se agregaron ${quantity} productos')
+      };
 return(
      <div>
          {
@@ -32,6 +35,10 @@ return(
          <ItemDetail{...product}/>:
          <h1>El producto no existe</h1>  
          }
+                 <div>
+
+         <ItemCount initial= {0} stock ={10} onAdd={handleOnAdd}/> 
+ </div>
  </div>
          
 )
