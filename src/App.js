@@ -15,14 +15,14 @@ const App =()=> {
   const [show, setShow]=useState('detail')
   return (
     <div className="App">
-      <header className="App-header">
-      <div className="Caja-logo">
-        <img src={'./images/logo.png'} className="App-logo" alt="logo" />
-        </div>
+      <header className="App-header"> 
         <BrowserRouter>
      <NavBar/>
      <Routes>
-       <Route path='/Ofertas' element={<Home/>}/>
+     {/* <Route path='/' element={<Home/>}/>
+     <Route path='/Ofertas' element={<ItemListContainer/>}/> */}
+       {/* <Route path='/Tablas' element={<ItemListContainer/>}/> */}
+       <Route path='./images/logo.png' element={<ItemListContainer/>}/>
        <Route path='/' element={<ItemListContainer/>}/>
        <Route path='/Detail/:productId' element={<ItemDetailContainer/>}/>
        <Route path='/tablas' element={<Tablas/>}/>

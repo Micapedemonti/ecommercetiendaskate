@@ -3,6 +3,8 @@ import ItemDetail from "../Detalles/ItemDetail"
 import { getProductsById } from "../../asyncmock"
 import {useParams} from 'react-router-dom'
 import ItemCount from "../ItemCount/ItemCount"
+import ItemListContainer from "../ItemListContainer/ItemsListContainer"
+
 
 
 const ItemDetailContainer =(props)=>{ 
@@ -32,7 +34,8 @@ return(
              loading ?
              <h1>cargando...</h1>:
              product ?
-         <ItemDetail{...product}/>:
+             <ItemDetail{...product}/>:
+        //  <ItemDetail{...product}/>:
          <h1>El producto no existe</h1>
     
         //  <ItemCount initial= {0} stock ={10} onAdd={handleOnAdd}/> 

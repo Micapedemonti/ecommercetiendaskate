@@ -1,6 +1,9 @@
 
 ul{
     display: flex;
-    margin-top: 5%;
+    margin-top: 3%;
     justify-content: space-around;
+}
+.containerProductos{
+    border: 3px solid black;
 }
