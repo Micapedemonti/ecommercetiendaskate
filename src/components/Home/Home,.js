@@ -1,7 +1,7 @@
 const Home =()=>{
     return (
         <div>
-            <h1>BIENVENIDO A UFOSHOP</h1>
+            <h1>OFERTAS DEL  MES</h1>
         </div>
         
     )
