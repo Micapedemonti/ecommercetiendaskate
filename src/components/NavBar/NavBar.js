@@ -13,11 +13,11 @@ import {Link} from 'react-router-dom'
                 </button>
                 <div class="collapse navbar-collapse menuNav" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    {/* <li class="nav-item">
-                      <Link class="nav-link active" to='/'>INICIO</Link>
-                      </li> */}
                     <li class="nav-item">
-                    <Link to= '/' class="nav-link active">OFERTAS</Link>
+                      <Link class="nav-link active" to='/'>INICIO</Link>
+                      </li>
+                    <li class="nav-item">
+                    <Link to= '/ofertas' class="nav-link active">OFERTAS</Link>
                     </li>
                     <li class="nav-item">
                     <Link to= '/tablas' class="nav-link active">TABLAS</Link>

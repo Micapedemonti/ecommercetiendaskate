@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import ItemDetail from "../Detalles/ItemDetail"
 import { getProductsById } from "../../asyncmock"
 import {useParams} from 'react-router-dom'
+import './Tablas.css'
+
 
 
 
@@ -24,13 +26,15 @@ const Tablas =(props)=>{
         })
     },[])    
 return(
-     <div>
+     <div className="containerTablas">
          {
              loading ?
              <h1>cargando...</h1>:
              product ?
          <ItemDetail{...product}/>:
          <h1>El producto no existe</h1>  
+
+
          }
                  <div>
 

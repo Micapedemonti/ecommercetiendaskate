@@ -15,11 +15,12 @@ const increment =()=>{
 
 return (
     <div className= 'carrito'>
-        <h3>Carrito de compras</h3>
+        {/* <h3>Carrito de compras</h3> */}
+    
      <div className='contador'>   
-        <button onClick = {decrement}> - </button>
+        <button  className='botonCart' onClick = {decrement}> - </button>
         <p>{count}</p>
-        <button onClick = {increment}> + </button>
+        <button className='botonCart' onClick = {increment}> + </button>
     </div>
     <div className='agregaCarrito'>
     <button onClick = {() => onAdd(count)}>Agregar al carrito</button>
