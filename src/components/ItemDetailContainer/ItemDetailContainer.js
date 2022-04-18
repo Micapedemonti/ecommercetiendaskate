@@ -12,9 +12,9 @@ const ItemDetailContainer =(props)=>{
     const[loading, setLoading]=useState(true)
 
     const {productId}=useParams()
-    const handleOnAdd =(quantity)=> {
-        //     console.log ('se agregaron ${quantity} productos')
-    }
+    // const handleOnAdd =(quantity)=> {
+    //     //     console.log ('se agregaron ${quantity} productos')
+    // }
     useEffect(()=> {
         getProductsById(productId).then(prods =>{
             setProduct(prods)
@@ -35,12 +35,10 @@ return(
              <h1>cargando...</h1>:
              product ?
              <ItemDetail{...product}/>:
-        //  <ItemDetail{...product}/>:
          <h1>El producto no existe</h1>
-    
-        //  <ItemCount initial= {0} stock ={10} onAdd={handleOnAdd}/> 
+
   }
-    <ItemCount initial= {0} stock ={10} onAdd={handleOnAdd}/> 
+    {/* <ItemCount initial= {0} stock ={10} onAdd={handleOnAdd}/>  */}
  </div>
          
 )

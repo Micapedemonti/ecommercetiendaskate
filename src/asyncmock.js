@@ -29,16 +29,12 @@ const products=[
 //      { id: '2', name: 'Tabla de skate girl', Price: 9050, category:'Tablas', img : 'https://cdnx.jumpseller.com/life-boardshop/image/20759824/resize/635/635?1644261489', width:50, stock: 3, description: 'Tabla profesional, está hecho de madera de arce canadiense de 7 capas de alta densidad; peso máximo de soporte de 220.5 lbs, apto para adultos y niños de 5 años en adelante.'},
 // ]
 
-const tablas=[
-    {id: 'maple canadiense', name:'maple'},
-    {id: 'guatambu', name:'guatambu'},
-]
 
-export const getTablas =()=>{
+export const getProductsbyTablas =(category)=>{
     
     return new Promise(resolve =>{
         setTimeout(()=>{
-            resolve(tablas)
+            resolve(products.find(prod=> prod.category == category))
         },500)
     })
 }
