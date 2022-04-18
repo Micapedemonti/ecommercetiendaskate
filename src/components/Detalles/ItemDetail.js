@@ -21,7 +21,7 @@ const ItemDetail =({id, Price, name, description, img}) => {
   const [quantity, setQuantity]= useState(0)
    const handleOnAdd =(quantity)=>{
     console.log (`se agregaron ${quantity} productos`)
-    setQuantity(ItemCount)
+    // setQuantity(ItemCount)
   
     }
 
