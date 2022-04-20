@@ -1,47 +1,60 @@
-import ItemCount from "../ItemCount/ItemCount"
-import { useState } from "react"
-import {Link} from 'react-router-dom'
 import './ItemDetail.css'
-import Item from "../Productos/Item"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
 
-// const handleOnAdd =(ItemCount)=> {
-//   console.log ('se agregaron ${quantity} productos')
-  
-//     }
+const InputCount = ({onConfirm, stock, initial=1}) => {
+    const [count, setCount] = useState(initial)
+    console.log(stock)
 
-
-// const [quantity, setQuantity]= useState(0)
-// const handleOnAdd =(ItemCount)=>{
-//   console.log ('se agregaron ${ItemCount} productos')
-//   setQuantity(ItemCount)
-// }
-// const [quantity, setQuantity]= useState(0)
-
-const ItemDetail =({id, Price, name, description, img}) => { 
-  const [count, setCount]= useState(1)
-   const handleOnAdd =(count)=>{
-    console.log (`se agregaron ${count} productos`)
-  
-  
-    }
 
     return (
-      <div className="cuerpoDetail">
-      <div class="card-group cardDetail">
-        <div class="card">
-          <img class="card-img-top" src={img} alt="Card image cap"/>
-          <div class="card-body">
-            <h5 class="card-title">{name}</h5>
-            <p class="card-text">{Price}</p>
-            <p class="card-text">{description}</p>
-         <ItemCount onAdd={handleOnAdd} stock ={15}/> 
-            {count > 0 ? <Link to='/cart'>Ir al carrito</Link> : <Link to='/cart'>Ir al carrito </Link>}
-          </div>
-          </div>
-          </div>
-          </div>
-
-     
+        <div>
+            <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+        </div>
     )
 }
+
+
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+    const [typeInput, setTypeInput] = useState(true)
+    const [quantity, setQuantity] = useState(0) 
+
+    const handleAdd = (count) => {
+        console.log  (`se agregaron ${count} productos`)
+        setQuantity(count)
+    }
+
+
+
+    const Count = typeInput ? ItemCount : InputCount
+
+    return (
+        <article className="CardItem">
+            <header className="Header">
+                <h2 className="ItemHeader">
+                    {name}
+                </h2>
+            </header>
+            <picture>
+                <img src={img} alt={name} className="ItemImg"/>
+            </picture>
+            <section>
+                <p className="Info">
+                    Categoria: {category}
+                </p>
+                <p className="Info">
+                    Descripción: {description}
+                </p>
+                <p className="Info">
+                    Precio: {price}
+                </p>
+            </section>           
+            <footer className='ItemFooter'>
+                {quantity > 0 ? <Link to='/cart'>Ir al carrito</Link> : <Count onConfirm={handleAdd} stock={stock}/> } 
+            </footer>
+        </article>
+    )
+}
+
 export default ItemDetail
