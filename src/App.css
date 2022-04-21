@@ -1,7 +1,6 @@
 body{
  display: grid;
  grid-template-rows: 0.2fr 1fr 0.2fr;
- background-color:wheat;
 }
 .App {
   text-align: center;

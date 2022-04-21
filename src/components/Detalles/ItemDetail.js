@@ -18,7 +18,7 @@ const InputCount = ({onConfirm, stock, initial=1}) => {
 
 
 const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
-    const [typeInput, setTypeInput] = useState(true)
+    // const [typeInput, setTypeInput] = useState(true)
     const [quantity, setQuantity] = useState(0) 
 
 
@@ -50,7 +50,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
 
 
 
-    const Count = typeInput ? ItemCount : InputCount
+    // const Count = typeInput ? ItemCount : InputCount
 
     return (
         <article className="CardItem">
