@@ -7,7 +7,7 @@ import ItemListContainer from "../ItemListContainer/ItemsListContainer"
 
 
 
-const ItemDetailContainer =(props)=>{ 
+const ItemDetailContainer =(setCart,cart)=>{ 
     const [product, setProduct] = useState([])
     const[loading, setLoading]=useState(true)
 
@@ -34,7 +34,7 @@ return(
              loading ?
              <h1>cargando...</h1>:
              product ?
-             <ItemDetail{...product}/>:
+             <ItemDetail{...product} setCart={setCart}cart={cart}/>:
          <h1>El producto no existe</h1>
 
   }

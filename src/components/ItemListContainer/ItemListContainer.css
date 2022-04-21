@@ -1,9 +1,33 @@
-
 ul{
     display: flex;
     margin-top: 3%;
     justify-content: space-around;
+    grid-gap: 2%;
 }
 .containerProductos{
-    border: 3px solid black;
+    margin-top: 5%;
+}
+.containerBanner{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    border: 1px solid silver;
+    
+}
+
+.banner{
+    width: 60%;
+}
+.fotoBanner{
+    width: 100%;
+    height: 580px;
+}
+.Textobanner{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+}
+.card-group:hover{
+    zoom: 1;
 }

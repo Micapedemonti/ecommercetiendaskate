@@ -1,7 +1,8 @@
 import './ItemDetail.css'
-import { useState } from 'react'
+import { useState,useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import { Context } from '../../App'
 
 const InputCount = ({onConfirm, stock, initial=1}) => {
     const [count, setCount] = useState(initial)
@@ -16,14 +17,36 @@ const InputCount = ({onConfirm, stock, initial=1}) => {
 }
 
 
-const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
     const [typeInput, setTypeInput] = useState(true)
     const [quantity, setQuantity] = useState(0) 
 
-    const handleAdd = (count) => {
-        console.log  (`se agregaron ${count} productos`)
-        setQuantity(count)
-    }
+
+
+
+    const {cart,setCart}= useContext(Context)
+
+
+       const handleAdd=(count)=>{
+         console.log(count)
+         setQuantity(count)
+      
+       const productObj ={
+           id,name,price
+       }
+       
+        setCart([...cart, {...productObj,quantity:count}])
+       }
+
+    // const handleAdd = (count) => {
+    //     console.log  (`se agregaron ${count} productos`)
+    //     const objProd={ 
+    //         id, name, price, quantity
+    //     }
+    //     setQuantity(count)
+    //     setCart([...cart,objProd])
+
+    // }
 
 
 
@@ -51,7 +74,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 </p>
             </section>           
             <footer className='ItemFooter'>
-                {quantity > 0 ? <Link to='/cart'>Ir al carrito</Link> : <Count onConfirm={handleAdd} stock={stock}/> } 
+                {quantity > 0 ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount onAdd={handleAdd} stock={stock}/> } 
             </footer>
         </article>
     )

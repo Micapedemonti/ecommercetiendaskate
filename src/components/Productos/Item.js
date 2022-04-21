@@ -1,9 +1,16 @@
 import './Item.css';
 import {Link} from 'react-router-dom'
+import { useContext } from 'react';
+import { Context } from '../../App';
 
 
 const Item =({id, name, img, Price}) => {
 
+
+
+const value=useContext(Context)
+console.log(value)
+  
     return(
         <div class="card-group">
         <div class="card">
