@@ -7,23 +7,23 @@ import ItemCount from './components/ItemCount/ItemCount';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
 import { useState, createContext } from 'react';
 import Home from './components/Home/Home,'
+import { CartContextProvider } from './components/context/CartContext';
 
-
-export const Context= createContext()
+// export const Context= createContext()
 
 
 const App =()=> {
 
-  const [cart,setCart]=useState([])
-  console.log(cart)
+  // const [cart,setCart]=useState([])
+  // console.log(cart)
 
   
   
 
   return (
     <div className="App">
-      <Context.Provider value={{cart,setCart}}>
-      {/* <header className="App-header">  */}
+      {/* <Context.Provider value={{cart,setCart}}> */}
+    <CartContextProvider>
         <BrowserRouter>
      <NavBar/>
      <Routes>
@@ -32,15 +32,16 @@ const App =()=> {
        {/* <Route path='/Tablas' element={<ItemListContainer/>}/> */}
        <Route path='./images/logo.png' element={<ItemListContainer/>}/>
        <Route path='/' element={<ItemListContainer/>}/>
-       <Route path='/Detail/:productId' element={<ItemDetailContainer setCart={setCart}cart={cart}/>}/>
+       <Route path='/Detail/:productId' element={<ItemDetailContainer/>}/>
        <Route path='/tablas' element={<Tablas/>}/>
        {/* <Route path='/accesorios' element={<ItemDetailContainer/>}/> */}
      </Routes>
-</BrowserRouter>
+</BrowserRouter> 
+{/* setCart={setCart}cart={cart} */}
 {/* </header>      
      </div> */}
-
-</Context.Provider>
+</CartContextProvider>
+{/* </Context.Provider> */}
 
  </div>
      
