@@ -1,16 +1,8 @@
 import './Item.css';
 import {Link} from 'react-router-dom'
-import { useContext } from 'react';
-// import { Context } from '../../App';
-
-
 const Item =({id, name, img, Price}) => {
 
 
-
-// const value=useContext(Context)
-// console.log(value)
-  
     return(
         <div class="card-group">
         <div class="card">
@@ -31,26 +23,4 @@ const Item =({id, name, img, Price}) => {
 
 
 
-
-
-
-
-    {/* //    <article className='CardItem'>
-           
-    //       <picture className='articulos'>
-    //           <img src ={img} alt ={name}/>
-    //       </picture>
-    //      <section className='seccionProducts'>
-    //       <h3>{name}</h3>
-    //       <p>{Price} </p>
-    //       </section>
-    //  <footer>
-    //      <Link to={`detail/${id}`}>Ver detalle</Link> 
-    //      </footer>
-    //     </article>
-    // )
-    // }  */}
-
 export default Item
-         
-       

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import CartContext from '../context/CartContext'
 
-
 const InputCount = ({onConfirm, stock, initial=1}) => {
     const [count, setCount] = useState(initial)
     console.log(stock)
@@ -18,8 +17,8 @@ const InputCount = ({onConfirm, stock, initial=1}) => {
 }
 
 
-const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
-    // const [typeInput, setTypeInput] = useState(true)
+const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
+
     const [quantity, setQuantity] = useState(0) 
 
 
@@ -29,29 +28,14 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
 
 
        const handleAdd=(count)=>{
-         console.log(count)
-        //  setQuantity(count)
       
        const productObj ={
-           id,name,price
+           id,name,Price
        }
        
         addItem({...productObj,quantity:count})
        }
 
-    // const handleAdd = (count) => {
-    //     console.log  (`se agregaron ${count} productos`)
-    //     const objProd={ 
-    //         id, name, price, quantity
-    //     }
-    //     setQuantity(count)
-    //     setCart([...cart,objProd])
-
-    // }
-
-
-
-    // const Count = typeInput ? ItemCount : InputCount
 
     return (
         <article className="CardItem">
@@ -71,7 +55,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
                     Descripción: {description}
                 </p>
                 <p className="Info">
-                    Precio: {price}
+                    Precio: {Price}
                 </p>
             </section>           
             <footer className='ItemFooter'>
