@@ -38,16 +38,17 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
 
 
     return (
+        <div className='CardContainer'>
         <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
                 </h2>
             </header>
-            <picture>
+            <picture className='fotoDetalle'>
                 <img src={img} alt={name} className="ItemImg"/>
             </picture>
-            <section>
+            <section className='detalleContainer'>
                 <p className="Info">
                     Categoria: {category}
                 </p>
@@ -62,6 +63,7 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
                 {isInCart(id) > 0 ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount onAdd={handleAdd} stock={stock}/> } 
             </footer>
         </article>
+        </div>
     )
 }
 

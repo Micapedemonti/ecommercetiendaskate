@@ -22,8 +22,9 @@ const App =()=> {
      <Routes>
        <Route path='./images/logo.png' element={<ItemListContainer/>}/>
        <Route path='/' element={<ItemListContainer/>}/>
+       <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
        <Route path='/Detail/:productId' element={<ItemDetailContainer/>}/>
-       <Route path='/tablas' element={<Tablas/>}/>
+       {/* <Route path='/tablas' element={<Tablas/>}/> */}
        <Route path='/cart' element={<Cart />} />
      </Routes>
 </BrowserRouter> 

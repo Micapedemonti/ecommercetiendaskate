@@ -1,6 +1,14 @@
 .cardDetail{
     width: 30%;
 }
+.CardContainer{
+    display: flex;
+    justify-content: center;
+}
+.CardItem{
+    border: 3px solid black;
+    width: 30%;
+}
 .cuerpoDetail{
     display: flex;
     justify-content: space-around;
@@ -9,4 +17,14 @@
 
 .card-footer{
     background-color: antiquewhite;
+}
+
+.detalleContainer p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.detalleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

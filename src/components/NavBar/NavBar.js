@@ -1,9 +1,19 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import {Link,NavLink} from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { getCategories } from '../../asyncmock'
       
       
       const NavBar =() =>{
+        const [categories, setCategories] =useState([])
+
+      useEffect(()=>{
+        getCategories().then (categories =>{
+          setCategories(categories)
+        })
+      },[])
+
           return (
               <nav class="navbar navbar-expand-lg navbar-light  menuNav">
               <div class="container-fluid">
@@ -26,17 +36,15 @@ import {Link,NavLink} from 'react-router-dom'
                     <li class="nav-item">
                       <Link class="nav-link active" to='/'>INICIO</Link>
                       </li>
-                    <li class="nav-item">
-                    <Link to= '/ofertas' class="nav-link active">OFERTAS</Link>
-                    </li>
-                    <li class="nav-item">
-                    <Link to= '/tablas' class="nav-link active">TABLAS</Link>
-                    </li>
+                    {categories.map(cat=> <NavLink key ={cat.id} to ={`/category/${cat.id}`} 
+                    className={({isActive})=> isActive ? 'ActiveOption ': 'Option'}
+                    >{cat.name}</NavLink>)}
+                       
                     <div>
-                <CartWidget/>
       
               </div>
                   </ul>
+                  <CartWidget/>
                 </div>
               </div>
             
