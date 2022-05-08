@@ -1,0 +1,28 @@
+h2{
+    font-size: 2.5rem;
+}
+.cartProducts{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.btnEliminar{
+    width: 50px;
+    height: 10%;
+    border-radius: 15px;
+    background-color: red;
+    padding: 10px;
+}
+.productsContainer{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-evenly;
+ 
+    margin-top: 5%;
+}
+.productsContainer p{
+    font-size: 2rem;
+}

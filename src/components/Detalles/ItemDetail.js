@@ -58,6 +58,9 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
                 <p className="Info">
                     Precio: {Price}
                 </p>
+                <p className="Info">
+                   Stock: {stock}
+                </p>
             </section>           
             <footer className='ItemFooter'>
                 {isInCart(id) > 0 ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount onAdd={handleAdd} stock={stock}/> } 

@@ -12,14 +12,7 @@ const ItemDetailContainer = ({ setCart, cart }) => {
     const { productId } = useParams()
 
     useEffect(() => {
-        // getProductsById(productId).then(item => {
-        //     setProduct(item)          
-        // }).catch(err  => {
-        //     console.log(err)
-        // }).finally(() => {
-        //     setLoading(false)
-        // })
-
+  
         getDoc(doc(firestoreDb, 'products', productId)).then(response => {
             console.log(response)
             const product = { id: response.id, ...response.data()}
@@ -43,7 +36,7 @@ const ItemDetailContainer = ({ setCart, cart }) => {
             { 
                 product ? 
                     <ItemDetail  {...product} setCart={setCart} cart={cart}/> :
-                    <h1>El producto no existe</h1> 
+                    <h1>Cargando</h1> 
             }
         </div>
     )    

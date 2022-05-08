@@ -20,6 +20,7 @@ export const CartContextProvider = ({ children }) => {
     
     const isInCart = (id) => {
         return cart.some(prod => prod.id === id )
+
     }
 
     const clearCart = () => {
@@ -37,6 +38,7 @@ export const CartContextProvider = ({ children }) => {
           (total, prod) => total + prod.quantity * prod.Price,
           0
         );
+        
     
         setTotal(calculateTotal);
       }, [cart]);
