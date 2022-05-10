@@ -11,7 +11,7 @@ import { firestoreDb} from '../../services/firebase/index';
 
     const[loading, setLoading]=useState(false)
 
-    const { cart, removeItem, total, clear, stock} = useContext(CartContext)
+    const { cart, removeItem, total, clear} = useContext(CartContext)
    
     const generarOrden =()=>{
         setLoading(true)
@@ -94,10 +94,7 @@ import { firestoreDb} from '../../services/firebase/index';
                         <p>Cantidad: {prod.quantity}</p>
                       </div>
                       <p className="cart__price">
-                         <span>{prod.price}</span>
-                      </p>
-                      <p className="cart__price">
-                         <span>stock :{prod.stock}</span>
+                         <span>{prod.Price}</span>
                       </p>
                       <p className="cart__subtotal">
                         Subtotal: 

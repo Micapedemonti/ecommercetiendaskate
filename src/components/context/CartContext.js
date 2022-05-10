@@ -17,7 +17,8 @@ export const CartContextProvider = ({ children }) => {
 
         return count
     }
-    
+
+
     const isInCart = (id) => {
         return cart.some(prod => prod.id === id )
 
@@ -38,7 +39,7 @@ export const CartContextProvider = ({ children }) => {
           (total, prod) => total + prod.quantity * prod.Price,
           0
         );
-        
+
     
         setTotal(calculateTotal);
       }, [cart]);
@@ -57,7 +58,8 @@ export const CartContextProvider = ({ children }) => {
             clearCart,
             removeItem,
             total,
-            clear
+            clear,
+        
         }}>
             {children}
         </CartContext.Provider>

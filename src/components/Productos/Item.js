@@ -9,7 +9,6 @@ const Item =({id, name, img, Price,stock}) => {
           <img  src={img} alt="Card image cap"/>
             <h5 class="card-title">{name}</h5>
             <p class="card-text"> {Price}</p>
-            <p class="card-text">Stock: {stock}</p>
           <div class="card-footer">
           <Link to={`/detail/${id}`}>Ver detalle</Link> 
           </div>
