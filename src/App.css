@@ -1,7 +1,4 @@
-body{
- display: grid;
- grid-template-rows: 0.2fr 1fr 0.2fr;
-}
+
 .App {
   text-align: center;
 }
@@ -20,7 +17,7 @@ body{
 
   }
   img{
-    width: 300px;
+    width: 200px;
   }
 }
 

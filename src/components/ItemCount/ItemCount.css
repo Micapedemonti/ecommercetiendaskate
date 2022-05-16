@@ -5,8 +5,36 @@
 }
 .contador{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .botonCart{
     padding: 3px;
     background-color: blue;
+}
+.btnContador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+.btnComprar{
+    display: inline-block;
+    background-color: #141414;
+    color: #fff;
+    padding: 1.125rem 2rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 2px solid #8a8a8a;
+    transition: .3s;
+    cursor: pointer;
+    margin: 5%;
+}
+.btnAgregar{
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    cursor: pointer;
+    color: #141414;
 }

@@ -4,6 +4,7 @@ import ItemDetail from '../Detalles/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { firestoreDb } from '../../services/firebase'
 import { getDoc, doc } from 'firebase/firestore'
+import "./ItemDetailContainer.css"
 
 const ItemDetailContainer = ({ setCart, cart }) => {
     const [product, setProduct] = useState()

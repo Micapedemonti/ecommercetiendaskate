@@ -26,7 +26,7 @@ const ItemListContainer=(props)=>{
     },[categoryId])
 
      return(
-       <div>
+       <div className="main">
         <h1>{props.greeting}</h1>
         <div className='containerBanner'>
         <div className='banner'>
@@ -38,7 +38,7 @@ const ItemListContainer=(props)=>{
          </div>
          </div>
         <div className='containerProductos'>
-        <h1>Productos destacados</h1>
+        <h1 className="titleContainer">PRODUCTOS DESTACADOS</h1>
         <ItemList products={products}/>
         </div>
         </div>

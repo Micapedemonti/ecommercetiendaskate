@@ -1,5 +1,5 @@
-h2{
-    font-size: 2.5rem;
+.containerCart{
+    margin-top: 5%;
 }
 .cartProducts{
     display: flex;
@@ -9,20 +9,73 @@ h2{
     align-items: baseline;
 }
 .btnEliminar{
-    width: 50px;
-    height: 10%;
-    border-radius: 15px;
-    background-color: red;
-    padding: 10px;
+  border: none;
+  background-color: white;
 }
 .productsContainer{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     width: 80%;
     justify-content: space-evenly;
- 
     margin-top: 5%;
 }
 .productsContainer p{
-    font-size: 2rem;
+  font-size: 1rem;
+  font-family: "Poppins",sans-serif; 
+}
+.fotoProd{
+    width: 150px;
+}
+.productsContainer h1{
+    font-size: 1.1rem;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+.containerCart h2{
+  font-family: 'Prata', serif;
+  font-size: 1.5rem;
+}
+.fotoDetalle{
+    width: 40%;
+}
+.cart__quantity{
+    width: 20%;
+}
+.productsName{
+    display: flex;
+    flex-direction: column;
+}
+.cart__total h1{
+    font-size: 1.6rem;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+.cart__total p{
+    font-size: 1.2rem;
+}
+.resume__btn{
+    background-color: #141414;
+    color: #fff;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 2px solid #8a8a8a;
+}
+.btnFinalizar{
+    background-color: #141414;
+    color: #fff;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 2px solid #8a8a8a;
+    text-decoration: none;
+
+}
+.resume{
+    width: 100%;
+}
+.resume__containerBtn{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
 }

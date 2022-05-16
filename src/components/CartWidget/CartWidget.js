@@ -11,7 +11,7 @@ const CartWidget=()=>{
 
    return(
        <div className='CajaCarrito'>
-           <img src='./images/cartcompras.png' className='LogoCarrito'/>
+           <img src='./images/carrito.png' className='LogoCarrito'/>
            {getQuantity()}
        </div>
    )

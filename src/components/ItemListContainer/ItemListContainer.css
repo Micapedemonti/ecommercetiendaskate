@@ -1,3 +1,6 @@
+.main{
+    height: 100vh;
+}
 ul{
     display: grid;
     margin-top: 3%;
@@ -6,23 +9,23 @@ ul{
     justify-items: center;
 
 }
+.titleContainer{
+    font-size: 1.5rem;
+     font-family: "Poppins",sans-serif;
+}
 .containerProductos{
     margin-top: 5%;
 }
 .containerBanner{
     display: flex;
-    margin-top: 5%;
     justify-content: space-between;
-    border: 1px solid silver;
+    border-bottom: 1px solid silver;
     
 }
 
-.banner{
-    /* width: 60%; */
-}
 .fotoBanner{
     width: 100%;
-    height: 70vh;
+    height: 60vh;
 
 }
 .Textobanner{
@@ -30,7 +33,9 @@ ul{
     flex-direction: column;
     width: 40%;
     justify-content: center;
+    
 }
-.card-group:hover{
-    zoom: 1;
+.Textobanner h1{
+    font-family: 'Koulen';
+    font-size: 2.5rem;
 }

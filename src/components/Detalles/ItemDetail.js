@@ -30,7 +30,7 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
        const handleAdd=(count)=>{
       
        const productObj ={
-           id,name,Price
+           id,name,Price,img
        }
        
         addItem({...productObj,quantity:count})
@@ -41,14 +41,17 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
         <div className='CardContainer'>
         <article className="CardItem">
             <header className="Header">
-                <h2 className="ItemHeader">
+                {/* <h2 className="titleDetalle">
                     {name}
-                </h2>
+                </h2> */}
             </header>
             <picture className='fotoDetalle'>
                 <img src={img} alt={name} className="ItemImg"/>
             </picture>
             <section className='detalleContainer'>
+            <h2 className="titleDetalle">
+                    {name}
+                </h2>
                 <p className="Info">
                     Categoria: {category}
                 </p>
@@ -61,13 +64,19 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
                 <p className="Info">
                     Stock: {stock}
                 </p>
+                <footer className='ItemFooter'>
+                
+                {isInCart(id) > 0 ? <Link className='btnIrCarrito' to='/cart'>Ir al carrito</Link> 
+                : <ItemCount onAdd={handleAdd} stock={stock} /> } 
+
+            </footer>
             </section>           
-            <footer className='ItemFooter'>
+            {/* <footer className='ItemFooter'>
                 
                 {isInCart(id) > 0 ? <Link to='/cart'>Ir al carrito</Link> 
                 : <ItemCount onAdd={handleAdd} stock={stock} /> } 
 
-            </footer>
+            </footer> */}
         </article>
         </div>
     )

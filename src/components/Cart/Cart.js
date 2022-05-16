@@ -4,6 +4,7 @@ import CartContext from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { getDocs, writeBatch,query,where,collection, documentId, addDoc } from "firebase/firestore";
 import { firestoreDb} from '../../services/firebase/index';
+import Formulario from '../Formulario/Formulario';
 
 
 
@@ -21,9 +22,11 @@ import { firestoreDb} from '../../services/firebase/index';
             name:'Micaela Pedemonti',
             phone:'345465',
             email: 'micaela12@gmail.com'
+            
         },
        total: total,
         date: new Date()
+       
       }
     
      console.log(generarOrden)
@@ -63,17 +66,18 @@ import { firestoreDb} from '../../services/firebase/index';
            console.log (error)
          }).finally (()=> {
            setLoading(false)
-         })
+         }) 
     }
         if (loading){
-          return <h1>Se esta generando su orden </h1>
-          
+          return (
+           <h1>Se esta generando su orden </h1>     
+          ),5000;
         }
-    
+               
     return (
         <>
           <main className="containerCart">
-            <h2>Artículos</h2>
+            <h2>MI CARRITO</h2>
             <div className="">
               {cart.length === 0 ? (
                 <div className="cart__empty">
@@ -86,27 +90,33 @@ import { firestoreDb} from '../../services/firebase/index';
               ) : (
                 cart.map((prod) => (
                   <div key={prod.id} className="cartProducts">
-    
                     <div className='productsContainer'>
-                      <p className="cart__name">{prod.name}</p>
-    
+                    <div className='productsName'>
+                   <h1>Producto</h1>
+                    <picture className='fotoDetalle'>
+                <img className='fotoProd'src={prod.img}/>
+            </picture>
+            </div>
+                     
                       <div className="cart__quantity">
-                        <p>Cantidad: {prod.quantity}</p>
+                        <h1>Cantidad</h1>
+                        <p>{prod.quantity}</p>
                       </div>
-                      <p className="cart__price">
-                         <span>{prod.Price}</span>
-                      </p>
-                      <p className="cart__subtotal">
-                        Subtotal: 
-                        <span>{prod.Price * parseInt(prod.quantity)}</span>
-                      </p>
+                      <div className="cart__price">
+                      <h1>Precio</h1>
+                         <p>${prod.Price}</p>
+                      </div>
+                      <div className="cart__subtotal">
+                        <h1>Subtotal</h1>
+                        <p>$ {prod.Price * parseInt(prod.quantity)}</p>
+                      </div>
                     </div>
                     <button
                       className="btnEliminar"
                       type="button"
                       onClick={() => removeItem(prod.id)}
                     >
-                      X
+                       <span class="iconify" data-icon="octicon:trash-16" data-width="25" data-height="25"></span>
                     </button>
                   </div>
                 ))
@@ -114,24 +124,22 @@ import { firestoreDb} from '../../services/firebase/index';
             </div>
             {total > 0 ? (
               <div className="resume">
-                <div className="resume__description">
-                  <h2>Resúmen del Pedido</h2>
-    
-                  <>
-                    <p className="cart__subtotal">
-                      Total a pagar /
-                      <span>{total}</span>
-                    </p>
+              <>
+                    <div className="cart__total">
+                     <h1>TOTAL A PAGAR</h1>
+                      <p>${total}</p>
+                    </div>
                   </>
-                </div>
                 <div className="resume__containerBtn">
                   <button className="resume__btn" type="submit" onClick={clear}>
-                    Vaciar carrito
+                   <p>VACIAR CARRITO</p>
                   </button>
-                </div>
+                
                 <div className="resume__containerBtn">
-                <button onClick={() => generarOrden()} className="Button">Generar Orden</button>
-
+                {/* <button onClick={() => generarOrden()} className="Button">Generar Orden  </button> */}
+                <Link className='btnFinalizar'to={'/Formulario/'}>IR A PAGAR</Link> 
+                   
+                </div>
                 </div>
               </div>
             ) : null}

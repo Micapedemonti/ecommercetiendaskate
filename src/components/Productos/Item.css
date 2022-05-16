@@ -1,0 +1,14 @@
+.card{
+    border: none;
+}
+.card-footer{
+    background-color: ghostwhite;
+}
+.card-footer a {
+    color: black;
+    text-decoration: none;
+}
+.btnDetalle:hover{
+    color: black;
+    text-decoration: none;
+}

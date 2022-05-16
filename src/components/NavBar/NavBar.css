@@ -1,40 +1,45 @@
+.navbar{
+ box-shadow: 0 2px 4px rgb(0 0 0 / 10%)
+}
 .menuNav{
     background-color: white;       
      display: flex;
      
 }
+.inicio{
+ background-color: ghostwhite;
+}
 .menuNav ul li{
-    font-size: 1.5rem;
+  font-size: 1rem;
+  font-family: "Poppins",sans-serif;
+}
+.nav-link active{
+  border-bottom: 3px solid black;
 }
 
 .Option {
-
-    margin: 1px;
-    /* TODO */
-    width: auto;
-    padding: 12px;
-    font-size: 1.5rem;
-    color: black;
-    flex: none;
-    display: flex;
-    order: 1;
-    flex-grow: 0;
-    text-decoration: none;
-    color:black;
+  order: 1;
+  font-size: 1rem;
+  font-family: "Poppins",sans-serif;
+  width: auto;
+  padding: 12px;
+  color: black;
+  flex: none;
+  display: flex;
+  text-decoration: none;
   }
-
+  .Option:hover{
+    color: black;
+  }
+.ActiveOption:hover{
+color: black;
+}
   .ActiveOption {
     text-decoration: none;
-    border-radius: 25;
-    margin: 0 50px;
-    /* TODO */
-    width: auto;
     padding: 12px;
-    font-size: 1.6rem;
-    /* background: red; */
     border-bottom: 3px solid black;
-    flex: none;
-    display: flex;
+    font-size: 1.2rem;
+    font-family: "Poppins",sans-serif;
     order: 1;
     align-self: center;
     flex-grow: 0;
@@ -42,8 +47,10 @@
     align-items: center;
     text-decoration: none;
     color:black;
-    /* border: none;
-    border-style: none; */
     cursor: pointer;
     outline: inherit;
+  }
+  .logo{
+    width: 100px;
+
   }
