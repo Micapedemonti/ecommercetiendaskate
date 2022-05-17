@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+## UFO SKATESHOP
+## Tienda de skate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ufo skateshop es un ecommerce creado a partir del curso de React Js. La funcion de este proyecto es poder visualizar los productos a traves de sus categorias y comprar un producto finalizando con una orden de compra.
+## Que necesitas para acceder a mi proyecto:
+## Ejecutar en la consola los siguientes comandos:
+git clone  https://github.com/Micapedemonti/ecommercetiendaskate
+npm install 
+npm start
 
-## Available Scripts
+## Tecnologia que use para realizar mi proyecto:
+- HTML
+- CSS
+- JAVASCRIPT
+- REACT JS
+- BOOTSTRAP
+- 
+## Mis componentes:
+## Navbar
+> Es el menu de navegacion donde vamos a enontrar distints tipos de categorias de los productos y podremos acceder al producto segun la categoria que clickeemos a traves de una funcion llamada getCategories.
+## ItemCount
+> Es el contador en donde podremos agregar o quitar productos de a uno, para esto tenemos dos funciones increment y decrement. 
+## ItemList 
+>Este componente se encarga de de recorrer los productos, recibirlos mediante props, y ser llamados en el componente ItemListContainer.
+## Item
+>Este componente nos mostrara a traves de una tarjeta los productos que estan disponible en la pagina recibiendo por props el nombre, la imagen y su precio.
+## ItemDetailContainer
+> Este componente cumple la funcion de mostrarnos el detalle del producto seleccionado cuando el usuario hace click en el boton ver detalle.
+## ItemDetail
+> Aqui encontraremos la descripcion del producto elegido por el usuario donde vamos a llamar al contador y podemos añadir cuantos productos haya disponible al carrito.
+## CartWidget: 
+> Muestra el icon del carrito de compra asi como tambien mostrara cuantos productos tenemos agregados para comprar.
+## Cart
+>En este componente encontraremos los productos que añadimos al carrito, donde tambien tendremos la posibilidad de eliminar el producto asi como tambien vaciar el carrito o generar la orden de compra.
+## Context
+>En este componente encontraremos todas las funciones a la que son llamadas en el componente Cart para cumplir sus respectivas funciones.
+>clearCart: Vacia el carrito si asi lo deseamos.
+>removeItem: Eliminamos el producto que queremos.
+>getQuantity: nos muestra la cantidad de productos que tenemos dentro del carrito.
+>setTotal: nos indica el total de nuestra compra.
+## Formulario
+>Aqui encontraremos el formulario de compra donde tendremos que llenar nuestros datos y al darle click en generar orden nos indicara el numero de compra-
 
-In the project directory, you can run:
 
-### `npm start`
+![video-to-gif-converter](https://user-images.githubusercontent.com/95888535/168922793-9fcbb211-bc99-416b-9b32-08903caceabe.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
