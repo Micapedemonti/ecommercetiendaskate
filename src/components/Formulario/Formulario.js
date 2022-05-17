@@ -47,8 +47,6 @@ const Formulario = ({orden}) => {
 					<div className='formContainer'>
 					<Form className="formulario">
 						<div className='formOrden'>
-							{/* <h1>SU NUMERO DE ORDEN ES:</h1>
-							<h2>{orden}</h2> */}
 							<label htmlFor="nombre">Nombres y Apellidos</label>
 							<Field
 								type="text" 

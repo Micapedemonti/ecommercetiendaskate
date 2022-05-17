@@ -1,4 +1,6 @@
-
+body{
+  height: 150vh;
+}
 .App {
   text-align: center;
 }
