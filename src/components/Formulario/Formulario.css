@@ -11,7 +11,14 @@
 	padding: 20px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
+.formOrden h1{
+	font-size: 1.2rem;
+	font-family: "Poppins",sans-serif;
+}
+.formOrden h2{
+	font-size: 1rem;
+	font-family: "Poppins",sans-serif;
+}
 .formulario > div {
 	margin-bottom: 20px;
 }

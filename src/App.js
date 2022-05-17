@@ -26,7 +26,6 @@ const App =()=> {
        <Route path='/' element={<ItemListContainer/>}/>
        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
        <Route path='/Detail/:productId' element={<ItemDetailContainer/>}/>
-       {/* <Route path='/tablas' element={<Tablas/>}/> */}
        <Route path='/cart' element={<Cart />} />
        <Route path='/Formulario' element={<Formulario/>} />
      </Routes>

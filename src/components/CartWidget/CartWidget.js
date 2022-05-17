@@ -1,6 +1,7 @@
 import './CartWidget.css'
 import { useContext } from 'react'
 import CartContext from '../context/CartContext'
+import carrito from '../../assets/carrito.png'
 
 
 const CartWidget=()=>{
@@ -11,7 +12,7 @@ const CartWidget=()=>{
 
    return(
        <div className='CajaCarrito'>
-           <img src='./images/carrito.png' className='LogoCarrito'/>
+           <img src={carrito} className='LogoCarrito'/>
            {getQuantity()}
        </div>
    )

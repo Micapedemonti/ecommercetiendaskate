@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Formulario.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-const Formulario = () => {
+const Formulario = ({orden}) => {
 	const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 	return (
 		<>
@@ -39,15 +39,16 @@ const Formulario = () => {
 				}}
 				onSubmit={(valores, {resetForm}) => {
 					resetForm();
-					console.log('Formulario enviado');
 					cambiarFormularioEnviado(true);
-					setTimeout(() => cambiarFormularioEnviado(false), 5000);
+					setTimeout(() => cambiarFormularioEnviado(false), 100000);
 				}}
 			>
 				{( {errors} ) => (
 					<div className='formContainer'>
 					<Form className="formulario">
-						<div>
+						<div className='formOrden'>
+							{/* <h1>SU NUMERO DE ORDEN ES:</h1>
+							<h2>{orden}</h2> */}
 							<label htmlFor="nombre">Nombres y Apellidos</label>
 							<Field
 								type="text" 
@@ -79,7 +80,10 @@ const Formulario = () => {
 						</div>
 						
 						<button type="submit">Enviar</button>
-						{formularioEnviado && <p className="exito">Compra realizada con exito!</p>}
+						{formularioEnviado && <p className="exito">ORDEN CONFIRMADA!
+						<h1>SU CODIGO DE COMPRA ES:</h1>
+							<h2>{orden}</h2></p>
+						}
 					</Form>
 					</div>
 				)}

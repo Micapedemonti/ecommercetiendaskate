@@ -4,6 +4,7 @@ import "./ItemListContainer.css"
 import { useParams } from "react-router-dom"
 import { getDocs, collection,query,where,limit } from "firebase/firestore"
 import { firestoreDb } from "../../services/firebase"
+import banner from '../../assets/surfskate.png'
 
 const ItemListContainer=(props)=>{ 
   const [products, setProducts] = useState([])
@@ -17,7 +18,6 @@ const ItemListContainer=(props)=>{
         : query(collection(firestoreDb, 'products'))
 
     getDocs(collectionRef).then(response => {
-        console.log(response)
         const products = response.docs.map(doc => {
             return { id: doc.id, ...doc.data()}
         })
@@ -30,7 +30,7 @@ const ItemListContainer=(props)=>{
         <h1>{props.greeting}</h1>
         <div className='containerBanner'>
         <div className='banner'>
-         <img className="fotoBanner"src='./images/surfskate.png'/>
+         <img className="fotoBanner"src={banner}/>
          </div>
          <div className='Textobanner'>
          <h1>UFO SKATESHOP</h1>

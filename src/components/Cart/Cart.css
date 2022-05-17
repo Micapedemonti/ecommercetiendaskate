@@ -1,5 +1,10 @@
 .containerCart{
     margin-top: 5%;
+    height: 150%;
+}
+.iconCargando{
+    margin-top: 10%;
+    height: 100%;
 }
 .cartProducts{
     display: flex;
@@ -71,11 +76,19 @@
     text-decoration: none;
 
 }
+.BtnOrderFin{
+    background-color: #141414;
+    color: #fff;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 2px solid #8a8a8a;
+    text-decoration: none;
+}
 .resume{
     width: 100%;
 }
 .resume__containerBtn{
-    display: flex;
     justify-content: center;
     gap: 5%;
 }

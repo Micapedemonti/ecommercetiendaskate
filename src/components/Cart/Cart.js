@@ -11,15 +11,18 @@ import Formulario from '../Formulario/Formulario';
    export const Cart = () => {
 
     const[loading, setLoading]=useState(false)
+    const[orden,setOrden]=useState()
+    const[activo,setActivo]=useState(false)
 
     const { cart, removeItem, total, clear} = useContext(CartContext)
    
     const generarOrden =()=>{
         setLoading(true)
       const objOrder ={
+        
         items: cart,
         buyer:{
-            name:'Micaela Pedemonti',
+            name: 'micaela',
             phone:'345465',
             email: 'micaela12@gmail.com'
             
@@ -28,8 +31,6 @@ import Formulario from '../Formulario/Formulario';
         date: new Date()
        
       }
-    
-     console.log(generarOrden)
     
     const ids= cart.map (prod => prod.id)
 
@@ -61,23 +62,26 @@ import Formulario from '../Formulario/Formulario';
             }
          }).then (({id})=>{
             batch.commit()
-            console.log( `el id de la orden es ${id}`)
+            setOrden(id)
+            setActivo(true)
          }).catch(error =>{
-           console.log (error)
          }).finally (()=> {
            setLoading(false)
          }) 
     }
-        if (loading){
+        if (loading){     
           return (
-           <h1>Se esta generando su orden </h1>     
-          ),5000;
+           <h1 className='iconCargando'>
+           <span class="iconify" data-icon="eos-icons:bubble-loading" data-width="40" data-height="40"></span>
+           </h1>    
+          )
         }
                
     return (
         <>
           <main className="containerCart">
             <h2>MI CARRITO</h2>
+            {/* {activo?<Formulario orden={orden}></Formulario>:null} */}
             <div className="">
               {cart.length === 0 ? (
                 <div className="cart__empty">
@@ -131,15 +135,15 @@ import Formulario from '../Formulario/Formulario';
                     </div>
                   </>
                 <div className="resume__containerBtn">
-                  <button className="resume__btn" type="submit" onClick={clear}>
+                  {activo?<Formulario orden={orden}></Formulario>
+                  :<>
+                <div className="resume__containerBtn">
+                <button onClick={() => generarOrden()} className="BtnOrderFin">GENERAR ORDEN  </button>
+                </div>
+                <button className="resume__btn" type="submit" onClick={clear}>
                    <p>VACIAR CARRITO</p>
                   </button>
-                
-                <div className="resume__containerBtn">
-                {/* <button onClick={() => generarOrden()} className="Button">Generar Orden  </button> */}
-                <Link className='btnFinalizar'to={'/Formulario/'}>IR A PAGAR</Link> 
-                   
-                </div>
+                  </>}
                 </div>
               </div>
             ) : null}

@@ -6,9 +6,6 @@ import CartContext from '../context/CartContext'
 
 const InputCount = ({onConfirm, stock, initial=1}) => {
     const [count, setCount] = useState(initial)
-    console.log(stock)
-
-
     return (
         <div>
             <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
@@ -64,12 +61,12 @@ const ItemDetail = ({ id, name, img, category, description, Price, stock}) => {
                 <p className="Info">
                     Stock: {stock}
                 </p>
-                <footer className='ItemFooter'>
+                <div className='ItemFoot'>
                 
                 {isInCart(id) > 0 ? <Link className='btnIrCarrito' to='/cart'>Ir al carrito</Link> 
                 : <ItemCount onAdd={handleAdd} stock={stock} /> } 
 
-            </footer>
+            </div>
             </section>           
             {/* <footer className='ItemFooter'>
                 
