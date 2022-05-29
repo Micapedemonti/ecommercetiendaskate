@@ -6,9 +6,12 @@ ul{
     justify-items: center;
 
 }
+/* .main{
+    height: 100vh;
+} */
 .titleContainer{
     font-size: 1.5rem;
-     font-family: "Poppins",sans-serif;
+     font-family: "koulen";
 }
 .containerProductos{
     margin-top: 5%;
@@ -36,3 +39,25 @@ ul{
     font-family: 'Koulen';
     font-size: 2.5rem;
 }
+.texh{
+    display: flex;
+    justify-content: center;
+}
+.texh h2 { 
+    display: block;
+    font-family: "koulen";
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 12ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+overflow:hidden;
+    }
+    
+    @keyFrames typing {
+    
+    from { width: 0}
+    }
+    
+    @keyFrames blink {
+     50% { border-color: transparent}
+    }

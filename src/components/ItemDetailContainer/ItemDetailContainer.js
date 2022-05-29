@@ -27,7 +27,8 @@ const ItemDetailContainer = ({ setCart, cart }) => {
 
     if(loading) {
         return(
-            <h1>Cargando...</h1> 
+            // <h1>Cargando...</h1> 
+            <span class="iconify" data-icon="eos-icons:bubble-loading" data-width="40" data-height="40"></span>
         )
     }
 
@@ -36,7 +37,9 @@ const ItemDetailContainer = ({ setCart, cart }) => {
             { 
                 product ? 
                     <ItemDetail  {...product} setCart={setCart} cart={cart}/> :
-                    <h1>Cargando</h1> 
+                    <p className='iconoCargando'>
+                    <span class="iconify" data-icon="eos-icons:bubble-loading" data-width="40" data-height="40"></span>
+                    </p>
             }
         </div>
     )    

@@ -34,7 +34,9 @@ const ItemListContainer=(props)=>{
          </div>
          <div className='Textobanner'>
          <h1>UFO SKATESHOP</h1>
-        <h1>SINCE 2015</h1>
+         <div className="texh">
+        <h2>SINCE 2015</h2>
+        </div>
          </div>
          </div>
         <div className='containerProductos'>
@@ -42,6 +44,7 @@ const ItemListContainer=(props)=>{
         <ItemList products={products}/>
         </div>
         </div>
+        
     )
 }
 

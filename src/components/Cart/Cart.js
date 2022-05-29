@@ -81,8 +81,7 @@ import Formulario from '../Formulario/Formulario';
         <>
           <main className="containerCart">
             <h2>MI CARRITO</h2>
-            {/* {activo?<Formulario orden={orden}></Formulario>:null} */}
-            <div className="">
+            <div className="products-cart">
               {cart.length === 0 ? (
                 <div className="cart__empty">
                   <p>No hay productos en el carrito</p>

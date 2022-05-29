@@ -1,0 +1,19 @@
+.footer-container{
+    width: 100%;
+    background-color: ghostwhite;
+    height: 20%;
+    margin-top: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.link-footer{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;   
+}
+.link-footer:hover{
+color: black;
+}
